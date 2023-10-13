@@ -6,18 +6,14 @@ using UnityEngine.Animations;
 
 public class player : MonoBehaviour
 {
-    public Camera cam;
     public float speed;
-    public float score;
     public Rigidbody rb;
-    public Vector2 inputVector;
-    private Vector3 offset = new Vector3(0, 0, -10);
+    public Vector3 inputVector;
 
     // Update is called once per frame
     void Update()
     {
-        score = Time.deltaTime;
-        inputVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Forward"));
+        inputVector = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         rb.velocity = (inputVector.normalized) * speed;
     }
 }
