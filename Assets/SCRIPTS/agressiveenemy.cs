@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class enemy : MonoBehaviour
+public class agressiveenemy : MonoBehaviour
 {
     private Vector3 target;
     public GameObject player;
@@ -12,7 +12,6 @@ public class enemy : MonoBehaviour
 
     private void Start()
     {
-        //SICK i will say referencing other gameobjects/nodes is way easier in unity than in godot 
         player = GameObject.Find("Player");
     }
     void Update()
