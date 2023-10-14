@@ -168,9 +168,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dalight: {fileID: 2087269284}
+  playr: {fileID: 976436788}
   duration: 5
   timeRemaining: 0
   day: 1
+  money: 0
 --- !u!1 &196904586
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,12 +505,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c2707f5abe12684db040d458ab744ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stamina: 0
+  bossman: {fileID: 158093306}
+  stamina: 5
   maxStamina: 5
-  speed: 5
+  speed: 4
   rb: {fileID: 976436787}
   inputVector: {x: 0, y: 0, z: 0}
   skateboard: {fileID: 976436791}
+  sprintSpeed: 6
 --- !u!212 &976436789
 SpriteRenderer:
   m_ObjectHideFlags: 0

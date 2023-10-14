@@ -6,6 +6,7 @@ using UnityEngine.Animations;
 
 public class player : MonoBehaviour
 {
+    public manager bossman;
     private bool sprinting = false;
     public float stamina;
     public float maxStamina;
@@ -13,6 +14,7 @@ public class player : MonoBehaviour
     public Rigidbody rb;
     public Vector3 inputVector;
     public SphereCollider skateboard;
+    public int sprintSpeed;
 
     private void Start()
     {
@@ -33,7 +35,7 @@ public class player : MonoBehaviour
         {
             if (stamina > 0)
             {
-               speed = 10;
+               speed = sprintSpeed;
                stamina -= 1 * Time.deltaTime;
             }
             else
@@ -44,7 +46,7 @@ public class player : MonoBehaviour
         }
         if (!sprinting)
         {
-            speed = 5;
+            speed = 4;
             if (stamina<maxStamina)
             {
                 stamina += 1 * Time.deltaTime;
