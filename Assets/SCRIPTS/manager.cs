@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class manager : MonoBehaviour
 {
-    public int duration = 60;
-    private int timeRemaining;
+    public Light dalight;
+    public int duration = 5;
+    public int timeRemaining;
     private bool countingDown = false;
     public bool day = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        startTimer();
     }
 
     // Update is called once per frame
@@ -46,6 +47,9 @@ public class manager : MonoBehaviour
     public void timerDone()
     {
         day = false;
+        dalight.intensity = 0;
     }
+
+
 
 }
