@@ -169,6 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dalight: {fileID: 2087269284}
   duration: 5
+  timeRemaining: 0
   day: 1
 --- !u!1 &196904586
 GameObject:
@@ -439,6 +440,7 @@ GameObject:
   - component: {fileID: 976436788}
   - component: {fileID: 976436789}
   - component: {fileID: 976436790}
+  - component: {fileID: 976436791}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -504,6 +506,7 @@ MonoBehaviour:
   speed: 5
   rb: {fileID: 976436787}
   inputVector: {x: 0, y: 0, z: 0}
+  skateboard: {fileID: 976436791}
 --- !u!212 &976436789
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -576,7 +579,28 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.1790575, y: 0.45719576, z: 0.07837683}
-  m_Center: {x: 0.0018805936, y: 0.010766029, z: 0.0000006109476}
+  m_Center: {x: 0, y: 0, z: 0.0000006109476}
+--- !u!135 &976436791
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976436785}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1480971071
 GameObject:
   m_ObjectHideFlags: 0
