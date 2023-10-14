@@ -6,6 +6,9 @@ using UnityEngine.Animations;
 
 public class player : MonoBehaviour
 {
+    private bool sprinting = false;
+    public float stamina;
+    public float maxStamina;
     public float speed;
     public Rigidbody rb;
     public Vector3 inputVector;
@@ -18,6 +21,35 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            sprinting = true;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            sprinting = false;
+        }
+        if (sprinting)
+        {
+            if (stamina > 0)
+            {
+               speed = 10;
+               stamina -= 1 * Time.deltaTime;
+            }
+            else
+            {
+                sprinting = false;
+                stamina = -2;
+            }
+        }
+        if (!sprinting)
+        {
+            speed = 5;
+            if (stamina<maxStamina)
+            {
+                stamina += 1 * Time.deltaTime;
+            }
+        }
         inputVector = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         rb.velocity = (inputVector.normalized) * speed;
         if (Input.GetKeyDown(KeyCode.Space)&!skateboard.enabled)

@@ -503,6 +503,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c2707f5abe12684db040d458ab744ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stamina: 0
+  maxStamina: 5
   speed: 5
   rb: {fileID: 976436787}
   inputVector: {x: 0, y: 0, z: 0}
