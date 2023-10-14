@@ -16,4 +16,6 @@ public class player : MonoBehaviour
         inputVector = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         rb.velocity = (inputVector.normalized) * speed;
     }
+
+
 }
