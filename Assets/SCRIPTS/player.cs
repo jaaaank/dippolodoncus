@@ -69,7 +69,7 @@ public class player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.isTrigger)
+        if (!other.isTrigger & other.tag != "shelf")
         {
             Destroy(other.gameObject);
         }

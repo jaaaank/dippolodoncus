@@ -7,11 +7,12 @@ TagManager:
   - hidingspot
   - aisleSensor
   - shopper
+  - shelf
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - player
   - Water
   - UI
   - 
