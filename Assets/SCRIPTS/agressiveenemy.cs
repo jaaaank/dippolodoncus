@@ -1,24 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class agressiveenemy : MonoBehaviour
 {
     private Vector3 target;
-    public GameObject player;
+    public player playr;
     public float speed;
     public SpriteRenderer sprite;
 
     private void Start()
     {
-        player = GameObject.Find("Player");
     }
     void Update()
     {
-        if (player != null)
+        if (playr.gameObject != null & !playr.hidden)
         {
-            target = player.transform.position;
+            target = playr.gameObject.transform.position;
         }
         if (target.x - transform.position.x >= 0)
         {
@@ -42,7 +40,7 @@ public class agressiveenemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Destroy(player);
+            Destroy(playr.gameObject);
         }
     }
 }

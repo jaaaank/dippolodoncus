@@ -18,26 +18,25 @@ public class wanderingenemy : MonoBehaviour
     void Update()
     {
 
-        //once we get a map i'll make it actually wander
-
-        if (target.x - transform.position.x >= 0)
+        if (playr != null & !playr.hidden)
         {
-            sprite.flipX = true;
-        }
-        if (target.x - transform.position.x < 0)
-        {
-            sprite.flipX = false;
-        }
-
-        if (agressive)
-        {
-            if (playr != null)
+            if (agressive)
             {
                 target = playr.transform.position;
+                transform.LookAt(target);
+                transform.Translate(Vector3.forward * Time.deltaTime * speed);
+                sprite.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
-            transform.LookAt(target);
-            transform.Translate(Vector3.forward * Time.deltaTime * speed);
-            sprite.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+            //once we get a map i'll make it actually wander
+            if (target.x - transform.position.x >= 0)
+            {
+                sprite.flipX = true;
+            }
+            if (target.x - transform.position.x < 0)
+            {
+                sprite.flipX = false;
+            }
         }
     }
     private void OnCollisionEnter(Collision collision)

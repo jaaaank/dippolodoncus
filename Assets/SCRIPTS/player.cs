@@ -15,6 +15,7 @@ public class player : MonoBehaviour
     public Vector3 inputVector;
     public SphereCollider skateboard;
     public int sprintSpeed;
+    public bool hidden;
 
     private void Start()
     {
@@ -73,6 +74,24 @@ public class player : MonoBehaviour
             Destroy(other.gameObject);
         }
         //do something to the enemy here; move it somewhere, kill it, send it some signal idk, we'll get there once adam/tire finish the enemy designs/ideas
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "hidingspot")
+        {
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                hidden = true;
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "hidingspot")
+        {
+            hidden = false;
+        }
     }
 
 }
