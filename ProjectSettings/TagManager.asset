@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - hidingspot
+  - aisleSensor
+  - shopper
   layers:
   - Default
   - TransparentFX
