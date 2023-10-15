@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 
 public class aisleSensor : MonoBehaviour
 {
+    public manager dabossu;
     public shopper shoppa;
     public bool playerDetected = false;
     // Start is called before the first frame update
@@ -20,7 +21,7 @@ public class aisleSensor : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" & !dabossu.day)
         {
             shoppa.agressive = true;
             shoppa.speed = 4;
@@ -28,7 +29,7 @@ public class aisleSensor : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" & !dabossu.day)
         {
             shoppa.agressive = false;
             shoppa.speed = 1;

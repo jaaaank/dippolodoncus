@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class shopper : MonoBehaviour
 {
+    public manager dabossu;
     private Vector3 target;
     public player playr;
     public float speed;
@@ -20,7 +21,7 @@ public class shopper : MonoBehaviour
     {
         if (playr != null)
         {
-            if (agressive)
+            if (agressive & !dabossu.day)
             {
                 target = playr.transform.position;
                 transform.LookAt(target);
@@ -44,7 +45,7 @@ public class shopper : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" & !dabossu.day)
         {
             Destroy(playr.gameObject);
         }

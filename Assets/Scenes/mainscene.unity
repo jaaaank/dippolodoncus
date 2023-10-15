@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dalight: {fileID: 2087269284}
   playr: {fileID: 976436788}
-  duration: 5
+  duration: 10
   timeRemaining: 0
   day: 1
   money: 0
@@ -562,7 +562,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 2100000, guid: 80a58af7e593c5e42a998523a40d0b38, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -931,7 +931,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 80a58af7e593c5e42a998523a40d0b38, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1134,6 +1134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d71f9e0bcc1b849abf2fe540f419e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dabossu: {fileID: 158093306}
   shoppa: {fileID: 1835706387}
   playerDetected: 0
 --- !u!1 &1780481750
@@ -1385,7 +1386,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -1416,6 +1417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4babdc95b2d9e3443a91eb238a77bedb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dabossu: {fileID: 158093306}
   playr: {fileID: 976436788}
   speed: 1
   sprite: {fileID: 1835706383}
