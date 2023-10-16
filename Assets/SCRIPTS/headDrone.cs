@@ -9,18 +9,21 @@ public class headDrone : MonoBehaviour
     public float speed;
     public SpriteRenderer sprite;
     public AudioSource alarm;
+    private bool activated=false;
     // Start is called before the first frame update
     void Start()
     {
-        randomTarget();
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(target);
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
-        sprite.transform.rotation = Quaternion.Euler(0, 0, 0);
+        if (activated)
+        {
+            transform.LookAt(target);
+            transform.Translate(Vector3.forward * Time.deltaTime * speed);
+            sprite.transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
     }
 
 
@@ -38,8 +41,19 @@ public class headDrone : MonoBehaviour
         {
             target = other.transform.position;
             alarm.Play();
-            body.agressive = true;
+            body.caught = true;
             //activate the body
         }
+    }
+    public void activate()
+    {
+        activated = true;
+        randomTarget();
+    }
+    public void deactivate()
+    {
+        activated = false;
+        CancelInvoke();
+        transform.Translate(-30,0,0);
     }
 }

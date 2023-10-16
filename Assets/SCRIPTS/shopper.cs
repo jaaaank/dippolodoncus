@@ -49,5 +49,15 @@ public class shopper : MonoBehaviour
         {
             Destroy(playr.gameObject);
         }
+        if (collision.gameObject.tag == "nanner")
+        {
+            stun();
+        }
+    }
+
+    public void stun()
+    {
+        transform.Rotate(90, 0, 0);
+        transform.Translate(0, -0.4f, 0);
     }
 }

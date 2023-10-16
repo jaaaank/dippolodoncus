@@ -8,6 +8,7 @@ TagManager:
   - aisleSensor
   - shopper
   - shelf
+  - nanner
   layers:
   - Default
   - TransparentFX

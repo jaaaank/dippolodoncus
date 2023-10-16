@@ -11,7 +11,13 @@ public class manager : MonoBehaviour
     public int timeRemaining;
     private bool countingDown = false;
     public bool day = true;
+    public int nightNum = 0;
+
+    public headDrone drone1;
+
     public bool hasShoes{set{setShoes();}}
+    public int bananas = 0;
+    public int skateboards = 0;
     public int money = 0;
 
     void Start()
@@ -54,6 +60,8 @@ public class manager : MonoBehaviour
     {
         day = false;
         dalight.intensity = 0;
+        nightNum++;
+        if (nightNum > 0) { drone1.activate(); }
     }
     public void setShoes()
     {

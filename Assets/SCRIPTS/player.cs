@@ -16,6 +16,7 @@ public class player : MonoBehaviour
     public SphereCollider skateboard;
     public int sprintSpeed;
     public bool hidden;
+    public GameObject nanner;
 
     private void Start()
     {
@@ -69,7 +70,7 @@ public class player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.isTrigger & other.tag != "shelf")
+        if (!other.isTrigger & other.tag == "shopper")
         {
             Destroy(other.gameObject);
         }
@@ -79,7 +80,7 @@ public class player : MonoBehaviour
     {
         if (other.tag == "hidingspot")
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if(Input.GetKey(KeyCode.E))
             {
                 hidden = true;
             }

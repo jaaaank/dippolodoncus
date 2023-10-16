@@ -8,15 +8,22 @@ public class agressiveenemy : MonoBehaviour
     public player playr;
     public float speed;
     public SpriteRenderer sprite;
-    public bool agressive = false;
+    public bool caught = false;
+    public Vector3 startingPos;
 
     private void Start()
     {
         target = transform.position;
+        startingPos = transform.position;
     }
     void Update()
     {
-        if (agressive)
+        if (playr.hidden && caught)
+        {
+            print("bro gave up");
+            giveUp();
+        }
+        if (caught)
         {
             target = playr.gameObject.transform.position;
         }
@@ -27,10 +34,6 @@ public class agressiveenemy : MonoBehaviour
         if (target.x - transform.position.x < 0)
         {
             sprite.flipX = false;
-        }
-        if (playr.hidden && agressive)
-        {
-            agressive = false;
         }
         //float AngleRad = Mathf.Atan2(target.z - transform.position.z, target.x - transform.position.x);
         //float angle = (180 / Mathf.PI) * AngleRad;
@@ -48,5 +51,10 @@ public class agressiveenemy : MonoBehaviour
         {
             Destroy(playr.gameObject);
         }
+    }
+    private void giveUp()
+    {
+        target = startingPos;
+        caught = false;
     }
 }
