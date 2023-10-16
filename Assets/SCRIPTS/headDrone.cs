@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class headDrone : MonoBehaviour
 {
+    public agressiveenemy body;
     private Vector3 target;
     public float speed;
     public SpriteRenderer sprite;
@@ -37,6 +38,7 @@ public class headDrone : MonoBehaviour
         {
             target = other.transform.position;
             alarm.Play();
+            body.agressive = true;
             //activate the body
         }
     }
