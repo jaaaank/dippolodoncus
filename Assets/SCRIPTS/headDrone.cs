@@ -10,6 +10,7 @@ public class headDrone : MonoBehaviour
     public SpriteRenderer sprite;
     public AudioSource alarm;
     private bool activated=false;
+    public player playr;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +38,7 @@ public class headDrone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" & !playr.hidden)
         {
             target = other.transform.position;
             alarm.Play();

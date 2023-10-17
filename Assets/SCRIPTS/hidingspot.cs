@@ -34,13 +34,15 @@ public class hidingspot : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        words.text = "Press E to hide!";
+        if (other.tag == "Player")
+        {
+            words.text = "Press E to hide!";
+        }
     }
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
         {
-            print("shoob");
             if (Input.GetKey(KeyCode.E))
             {
                 words.text = "You're hiding!";
