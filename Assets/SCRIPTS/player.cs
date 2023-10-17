@@ -78,6 +78,7 @@ public class player : MonoBehaviour
         if (other.isTrigger & other.tag == "itempickup")
         {
             hasItem = true;
+            Destroy(other.gameObject);
         }
         //do something to the enemy here; move it somewhere, kill it, send it some signal idk, we'll get there once adam/tire finish the enemy designs/ideas
     }

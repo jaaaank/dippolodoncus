@@ -18,7 +18,7 @@ public class itemspawner : MonoBehaviour
         
     }
 
-    private void randomSpawner()
+    public void randomSpawner()
     {
         int positionnumbr = Random.Range(1, 11);
         switch (positionnumbr)

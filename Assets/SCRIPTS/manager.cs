@@ -7,7 +7,7 @@ public class manager : MonoBehaviour
 {
     public Light dalight;
     public player playr;
-    public int duration = 5;
+    public int duration = 60;
     public int timeRemaining;
     private bool countingDown = false;
     public bool day = true;
@@ -59,10 +59,18 @@ public class manager : MonoBehaviour
     }
     public void timerDone()
     {
-        day = false;
+        day = !day;
+        if (day)
+        {
+        dalight.intensity = 1;
+        }
+        else
+        {
         dalight.intensity = 0;
         nightNum++;
         if (nightNum > 0) { drone1.activate(); }
+        }
+        startTimer();
     }
     public void setShoes()
     {
