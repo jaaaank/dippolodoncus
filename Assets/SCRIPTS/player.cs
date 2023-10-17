@@ -17,6 +17,7 @@ public class player : MonoBehaviour
     public int sprintSpeed;
     public bool hidden;
     public GameObject nanner;
+    public bool hasItem=false;
 
     private void Start()
     {
@@ -73,6 +74,10 @@ public class player : MonoBehaviour
         if (!other.isTrigger & other.tag == "shopper")
         {
             Destroy(other.gameObject);
+        }
+        if (other.isTrigger & other.tag == "itempickup")
+        {
+            hasItem = true;
         }
         //do something to the enemy here; move it somewhere, kill it, send it some signal idk, we'll get there once adam/tire finish the enemy designs/ideas
     }

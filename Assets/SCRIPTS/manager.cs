@@ -14,6 +14,7 @@ public class manager : MonoBehaviour
     public int nightNum = 0;
 
     public headDrone drone1;
+    public itemspawner cashierspawner;
 
     public bool hasShoes{set{setShoes();}}
     public int bananas = 0;

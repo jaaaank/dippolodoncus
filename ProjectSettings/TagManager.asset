@@ -9,6 +9,7 @@ TagManager:
   - shopper
   - shelf
   - nanner
+  - itempickup
   layers:
   - Default
   - TransparentFX
