@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Animations;
+using static UnityEngine.GraphicsBuffer;
 
 public class player : MonoBehaviour
 {
@@ -12,10 +13,12 @@ public class player : MonoBehaviour
     public float maxStamina;
     public float speed;
     public Rigidbody rb;
+    public SpriteRenderer sprite;
     public Vector3 inputVector;
     public SphereCollider skateboard;
     public int sprintSpeed;
     public bool hidden;
+    public Animator unityanimatorsucksdick;
     public GameObject nanner;
     public bool hasItem=false;
 
@@ -63,6 +66,15 @@ public class player : MonoBehaviour
             //this is a dumb way of doing this but it works and its all i can think of for now
             Invoke("stopAttacking", 0.5f);
         }
+        if (rb.velocity.x > 0)
+        {
+            sprite.flipX = true;
+        }
+        if (rb.velocity.x < 0)
+        {
+            sprite.flipX = false;
+        }
+        unityanimatorsucksdick.SetFloat("velocity", Mathf.Abs(rb.velocity.magnitude));
     }
     private void stopAttacking()
     {

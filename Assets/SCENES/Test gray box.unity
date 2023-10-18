@@ -5810,6 +5810,7 @@ GameObject:
   - component: {fileID: 976436789}
   - component: {fileID: 976436790}
   - component: {fileID: 976436791}
+  - component: {fileID: 976436792}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5877,10 +5878,12 @@ MonoBehaviour:
   maxStamina: 5
   speed: 4
   rb: {fileID: 976436787}
+  sprite: {fileID: 976436789}
   inputVector: {x: 0, y: 0, z: 0}
   skateboard: {fileID: 976436791}
   sprintSpeed: 6
   hidden: 0
+  unityanimatorsucksdick: {fileID: 976436792}
   nanner: {fileID: 4782947895101465830, guid: f0becbf3070812a42a476618f07fd982, type: 3}
   hasItem: 0
 --- !u!212 &976436789
@@ -5924,12 +5927,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 91e74707d58b6074dbc710fd83897a25, type: 3}
+  m_Sprite: {fileID: -973358497, guid: d564577bed0f73b4da1c1fa4d4854ff6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.15, y: 0.21}
+  m_Size: {x: 2.5, y: 2.5024414}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -5977,6 +5980,27 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &976436792
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976436785}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b798b21a041e7947aa0187d2ce6da36, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &994969928
 GameObject:
   m_ObjectHideFlags: 0
