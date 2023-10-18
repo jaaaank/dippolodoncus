@@ -10,6 +10,6 @@ public class credits : MonoBehaviour
 
     public void backButton()
     {
-        SceneManager.LoadScene("Test gray box");
+        SceneManager.LoadScene("mainmenu");
     }
 }
