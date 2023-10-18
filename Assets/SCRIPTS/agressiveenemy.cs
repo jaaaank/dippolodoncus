@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class agressiveenemy : MonoBehaviour
 {
@@ -50,6 +51,7 @@ public class agressiveenemy : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Destroy(playr.gameObject);
+            SceneManager.LoadScene("gameover");
         }
     }
     private void giveUp()

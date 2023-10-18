@@ -9,12 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/SCENES/mainmenu.unity
+    path: Assets/Scenes/mainmenu.unity
     guid: 51bb54b1e6b578b4daeb24c05453b8a2
   - enabled: 1
-    path: Assets/SCENES/Test gray box.unity
+    path: Assets/Scenes/credits.unity
+    guid: 62a2dace6dae00e43bfce2cdf463f951
+  - enabled: 1
+    path: Assets/Scenes/Test gray box.unity
     guid: df14364ff6c812c4fbac7a277ac1fc5d
   - enabled: 1
-    path: Assets/SCENES/credits.unity
-    guid: 62a2dace6dae00e43bfce2cdf463f951
+    path: Assets/Scenes/gameover.unity
+    guid: 3e6b480f31fbcf14e97294d5db476460
   m_configObjects: {}

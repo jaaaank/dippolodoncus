@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class shopper : MonoBehaviour
 {
@@ -48,6 +49,7 @@ public class shopper : MonoBehaviour
         if (collision.gameObject.tag == "Player" & !dabossu.day)
         {
             Destroy(playr.gameObject);
+            SceneManager.LoadScene("gameover");
         }
         if (collision.gameObject.tag == "nanner")
         {

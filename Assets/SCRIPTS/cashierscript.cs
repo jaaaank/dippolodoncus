@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 using UnityEngine.U2D;
+using UnityEngine.SceneManagement;
 
 public class cashierscript : MonoBehaviour
 {
@@ -41,6 +42,8 @@ public class cashierscript : MonoBehaviour
         if (other.tag == "Player" & agressive)
         {
             Destroy(other.gameObject);
+            SceneManager.LoadScene("gameover");
+
         }
     }
 
@@ -54,6 +57,7 @@ public class cashierscript : MonoBehaviour
 
     public void stopTimer()
     {
+        //say "YAYYY or something idfk"
         CancelInvoke();
         countingDown = false;
     }

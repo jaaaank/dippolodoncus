@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class manager : MonoBehaviour
 {
-    public Light dalight;
+    public Light[] dalights;
     public player playr;
     public int duration = 60;
     public int timeRemaining;
@@ -14,6 +14,7 @@ public class manager : MonoBehaviour
     public int nightNum = 0;
 
     public headDrone drone1;
+    public headDrone drone2;
     public itemspawner cashierspawner;
 
     public bool hasShoes{set{setShoes();}}
@@ -62,14 +63,23 @@ public class manager : MonoBehaviour
         day = !day;
         if (day)
         {
-        dalight.intensity = 1;
+        dalights[0].intensity = 1; dalights[1].intensity = 1; dalights[2].intensity = 1; dalights[3].intensity = 1;
+
         }
         else
         {
-        dalight.intensity = 0;
+        dalights[0].intensity = 0; dalights[1].intensity = 0; dalights[2].intensity = 0; dalights[3].intensity = 0;
         nightNum++;
-        if (nightNum > 0) { drone1.activate(); }
-        }
+            if (nightNum > 0) 
+            {
+                drone1.activate(); 
+            }
+            if (nightNum > 1)
+            {
+                drone1.activate();
+                drone2.activate();
+            }
+        }    
         startTimer();
     }
     public void setShoes()
