@@ -13,14 +13,12 @@ public class shopper : MonoBehaviour
     public SpriteRenderer sprite;
     public Vector3 aisle;
     public bool agressive = false;
-    void Start()
-    {
-
-    }
+    public bool activated = false;
+    public Vector3 activationCoords;
 
     void Update()
     {
-        if (playr != null)
+        if (playr != null & activated)
         {
             if (agressive & !dabossu.day)
             {
@@ -46,7 +44,7 @@ public class shopper : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player" & !dabossu.day)
+        if (collision.gameObject.tag == "Player" & !dabossu.day & activated)
         {
             Destroy(playr.gameObject);
             SceneManager.LoadScene("gameover");
@@ -56,10 +54,24 @@ public class shopper : MonoBehaviour
             stun();
         }
     }
-
     public void stun()
     {
         transform.Rotate(90, 0, 0);
         transform.Translate(0, -0.4f, 0);
+        activated = false;
+        Invoke("standup", 5.0f);
+    }
+
+    public void activate()
+    { 
+        activated = true;
+        transform.localPosition = activationCoords;
+    }
+
+    public void standup()
+    {
+        activated = true;
+        transform.Rotate(-90, 0, 0);
+        transform.Translate(0, 0.4f, 0);
     }
 }

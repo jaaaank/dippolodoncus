@@ -9390,6 +9390,8 @@ MonoBehaviour:
   sprite: {fileID: 1392950978}
   aisle: {x: 0, y: 0, z: 0}
   agressive: 0
+  activated: 1
+  activationCoords: {x: 0, y: 0, z: 0}
 --- !u!212 &1392950978
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13675,6 +13677,8 @@ MonoBehaviour:
   sprite: {fileID: 1835706383}
   aisle: {x: 0, y: 0, z: 0}
   agressive: 0
+  activated: 1
+  activationCoords: {x: 0, y: 0, z: 0}
 --- !u!1 &1836821844
 GameObject:
   m_ObjectHideFlags: 0

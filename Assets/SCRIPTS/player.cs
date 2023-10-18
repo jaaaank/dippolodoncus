@@ -60,8 +60,9 @@ public class player : MonoBehaviour
         }
         inputVector = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         rb.velocity = (inputVector.normalized) * speed;
-        if (Input.GetKeyDown(KeyCode.Space)&!skateboard.enabled)
+        if (Input.GetKeyDown(KeyCode.Space)&!skateboard.enabled & bossman.skateboards > 0)
         {
+            bossman.skateboards -= 1;
             skateboard.enabled = true;
             //this is a dumb way of doing this but it works and its all i can think of for now
             Invoke("stopAttacking", 0.5f);
