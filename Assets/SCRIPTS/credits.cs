@@ -12,4 +12,9 @@ public class credits : MonoBehaviour
     {
         SceneManager.LoadScene("mainmenu");
     }
+
+    public void linkbutton(string wah)
+    {
+        Application.OpenURL(wah);
+    }
 }
