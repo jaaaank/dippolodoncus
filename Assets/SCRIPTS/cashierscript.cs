@@ -18,11 +18,7 @@ public class cashierscript : MonoBehaviour
     private int timeRemaining;
     private bool countingDown;
     private int duration = 30;
-    // Start is called before the first frame update
-    void Start()
-    {
-        askForItem();
-    }
+
 
     // Update is called once per frame
     void Update()
