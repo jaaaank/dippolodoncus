@@ -1466,7 +1466,8 @@ MonoBehaviour:
   day: 1
   nightNum: 0
   drone1: {fileID: 1573745117}
-  drone2: {fileID: 0}
+  drone2: {fileID: 1797486073}
+  cashier: {fileID: 1832657801}
   cashierspawner: {fileID: 2108610504}
   bananas: 0
   skateboards: 0

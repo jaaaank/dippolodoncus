@@ -15,6 +15,7 @@ public class manager : MonoBehaviour
 
     public headDrone drone1;
     public headDrone drone2;
+    public cashierscript cashier;
     public itemspawner cashierspawner;
 
     public bool hasShoes{set{setShoes();}}
@@ -68,8 +69,10 @@ public class manager : MonoBehaviour
         }
         else
         {
+        cashier.askForItem();
         dalights[0].intensity = 0; dalights[1].intensity = 0; dalights[2].intensity = 0; dalights[3].intensity = 0;
         nightNum++;
+
             if (nightNum > 0) 
             {
                 drone1.activate(); 
