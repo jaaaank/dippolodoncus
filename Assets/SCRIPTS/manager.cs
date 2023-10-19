@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
@@ -21,6 +22,7 @@ public class manager : MonoBehaviour
     public shopper shopper2;
     public shopper shopper3;
     public shopper shopper4;
+    public TextMeshProUGUI uitext;
 
     public bool hasShoes{set{setShoes();}}
     public int bananas = 0;
@@ -77,6 +79,7 @@ public class manager : MonoBehaviour
         {
             duration = 60;
         cashier.askForItem();
+            uitext.text = "THE CASHIER CRAVES A BANANER";
         dalights[0].intensity = 0; dalights[1].intensity = 0; dalights[2].intensity = 0; dalights[3].intensity = 0;
         nightNum++;
             if (nightNum > 0) 

@@ -4,6 +4,7 @@ using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 using UnityEngine.U2D;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class cashierscript : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class cashierscript : MonoBehaviour
     private int timeRemaining;
     private bool countingDown;
     private int duration = 30;
+    public TextMeshProUGUI uitext;
 
 
     // Update is called once per frame
@@ -45,6 +47,7 @@ public class cashierscript : MonoBehaviour
 
     public void askForItem()
     {
+        uitext.text = "THE CASHIER CRAVES A BANANER";
         //play some audio or something
         //put some text on screen or something
         itmspwnr.randomSpawner();
