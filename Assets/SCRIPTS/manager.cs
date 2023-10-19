@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class manager : MonoBehaviour
@@ -64,15 +65,17 @@ public class manager : MonoBehaviour
         day = !day;
         if (day)
         {
+            duration = 15;
         dalights[0].intensity = 1; dalights[1].intensity = 1; dalights[2].intensity = 1; dalights[3].intensity = 1;
-
+        drone1.deactivate();
+        drone2.deactivate();
         }
         else
         {
+            duration = 60;
         cashier.askForItem();
         dalights[0].intensity = 0; dalights[1].intensity = 0; dalights[2].intensity = 0; dalights[3].intensity = 0;
         nightNum++;
-
             if (nightNum > 0) 
             {
                 drone1.activate(); 
@@ -82,7 +85,12 @@ public class manager : MonoBehaviour
                 drone1.activate();
                 drone2.activate();
             }
-        }    
+            if (nightNum > 3)
+            {
+                SceneManager.LoadScene("credits");
+            }
+        }
+        countingDown = false;
         startTimer();
     }
     public void setShoes()

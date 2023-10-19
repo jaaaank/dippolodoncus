@@ -1461,7 +1461,7 @@ MonoBehaviour:
   - {fileID: 836332957}
   - {fileID: 560580586}
   playr: {fileID: 976436788}
-  duration: 60
+  duration: 15
   timeRemaining: 0
   day: 1
   nightNum: 0
