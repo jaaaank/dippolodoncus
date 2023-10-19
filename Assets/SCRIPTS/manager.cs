@@ -83,8 +83,14 @@ public class manager : MonoBehaviour
         shopper4.unityanimatorsucksdick.SetBool("daytime", day);
         if (day)
         {
-
-        duration = 15;
+            cashier.dayInterrupted();
+            playr.hasItem = false;
+            GameObject[] bananerFabs = GameObject.FindGameObjectsWithTag("itempickup");
+            foreach (GameObject obj in bananerFabs)
+            {
+                Destroy(obj);
+            }
+            duration = 15;
         shopper1.dontyouwannagoapeshit();
         shopper2.dontyouwannagoapeshit();
         shopper3.dontyouwannagoapeshit();
@@ -118,8 +124,8 @@ public class manager : MonoBehaviour
                 drone1.activate();
                 drone2.activate();
                 shopper2.activate();
-                //shopper3.activate();
-                //shopper4.activate();
+                shopper3.activate();
+                shopper4.activate();
             }
             if (nightNum > 3)
             {

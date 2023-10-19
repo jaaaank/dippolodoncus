@@ -20,6 +20,7 @@ public class cashierscript : MonoBehaviour
     private bool countingDown;
     private int duration = 30;
     public TextMeshProUGUI uitext;
+    private bool FUCKKKKKK = false;
 
 
     // Update is called once per frame
@@ -50,17 +51,10 @@ public class cashierscript : MonoBehaviour
         uitext.text = "THE CASHIER CRAVES A BANANER";
         //play some audio or something
         //put some text on screen or something
+        duration= 30;
         itmspwnr.randomSpawner();
         startTimer();
     }
-
-    public void stopTimer()
-    {
-        //say "YAYYY or something idfk"
-        CancelInvoke();
-        countingDown = false;
-    }
-
     public void startTimer()
     {
         if (!countingDown)
@@ -70,7 +64,6 @@ public class cashierscript : MonoBehaviour
             Invoke("tick", 1f);
         }
     }
-
     private void tick()
     {
         timeRemaining--;
@@ -80,12 +73,37 @@ public class cashierscript : MonoBehaviour
         }
         else
         {
-            outOfTime();
             countingDown = false;
+            if (!FUCKKKKKK) { outOfTime(); }
+            else { askForItem(); }
         }
+    }
+    public void stopTimer()
+    {
+        uitext.text = "THE CASHIER IS ENJOYING HIS BANANER";
+        //say "YAYYY or something idfk"
+        CancelInvoke();
+        countingDown = false;
+        cooldownTimer();
+    }
+
+    public void dayInterrupted()
+    {
+        uitext.text = "THE CASHIER SCRAMBLED AWAY BECAUSE THE DAY TIME CAME";
+        CancelInvoke();
+        countingDown= false;
     }
     public void outOfTime()
     {
+        uitext.text = "THE CASHIER IS GOING TO FUCKING EAT YOU";
         agressive = true;
+    }
+
+    public void cooldownTimer()
+    {
+        //i love making this completely INCOMPREHENSIBLE for any time i need to see this in the future lol
+        FUCKKKKKK = true;
+        duration = Random.Range(5, 15);
+        startTimer();
     }
 }
