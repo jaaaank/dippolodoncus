@@ -24,6 +24,7 @@ public class manager : MonoBehaviour
     public shopper shopper3;
     public shopper shopper4;
     public TextMeshProUGUI uitext;
+    public TextMeshProUGUI daytext;
 
     public bool hasShoes{set{setShoes();}}
     public int bananas = 0;
