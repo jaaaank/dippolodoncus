@@ -18,6 +18,9 @@ public class manager : MonoBehaviour
     public headDrone drone2;
     public cashierscript cashier;
     public itemspawner cashierspawner;
+    public shopper shopper2;
+    public shopper shopper3;
+    public shopper shopper4;
 
     public bool hasShoes{set{setShoes();}}
     public int bananas = 0;
@@ -83,7 +86,15 @@ public class manager : MonoBehaviour
             if (nightNum > 1)
             {
                 drone1.activate();
+                shopper2.activate();
+            }
+            if (nightNum > 2)
+            {
+                drone1.activate();
                 drone2.activate();
+                shopper2.activate();
+                //shopper3.activate();
+                //shopper4.activate();
             }
             if (nightNum > 3)
             {

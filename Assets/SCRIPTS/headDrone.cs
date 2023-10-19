@@ -25,12 +25,20 @@ public class headDrone : MonoBehaviour
             transform.Translate(Vector3.forward * Time.deltaTime * speed);
             sprite.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
+        if (target.x - transform.position.x >= 0)
+        {
+            sprite.flipX = true;
+        }
+        if (target.x - transform.position.x < 0)
+        {
+            sprite.flipX = false;
+        }
     }
 
 
     public void randomTarget()
     { 
-        int randx = Random.Range(-11, 12);
+        int randx = Random.Range(-11, 20);
         int randz = Random.Range(-12, 13);
         target = new Vector3 (randx, 1.6f, randz);
         Invoke("randomTarget", 3.0f);

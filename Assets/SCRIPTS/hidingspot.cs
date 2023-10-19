@@ -10,9 +10,10 @@ public class hidingspot : MonoBehaviour
     public BoxCollider box;
     public TextMeshPro words;
     public player playr;
+    public GameObject goolio;
     public bool hidingHere;
     public float timeHiddenHere;
-    private int timeLimit = 10;
+    private int timeLimit = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +48,7 @@ public class hidingspot : MonoBehaviour
             {
                 words.text = "You're hiding!";
                 hidingHere= true;
+                playr.hidden = true;
             }
         }
     }
@@ -61,10 +63,11 @@ public class hidingspot : MonoBehaviour
     }
     public void kickout()
     {
+        words.text = "";
+        Instantiate(goolio, transform.position, new Quaternion(0,0,0,0));
         hidingHere = false;
         destroyed = true;
         playr.hidden = false;
-        words.text = "you got kicked out this text is temporary";
     }
 
 }

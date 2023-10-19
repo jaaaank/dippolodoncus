@@ -11,6 +11,7 @@ public class agressiveenemy : MonoBehaviour
     public SpriteRenderer sprite;
     public bool caught = false;
     public Vector3 startingPos;
+    private Vector3 lostOffset = new Vector3(0,0,-.8f);
 
     private void Start()
     {
@@ -19,12 +20,13 @@ public class agressiveenemy : MonoBehaviour
     }
     void Update()
     {
-        if (playr.hidden && caught)
+        if (playr.hidden & caught)
         {
             print("bro gave up");
-            giveUp();
+            target = playr.gameObject.transform.position + lostOffset;
+            Invoke("giveUp", 4.5f);
         }
-        if (caught)
+        if (!playr.hidden & caught)
         {
             target = playr.gameObject.transform.position;
         }
