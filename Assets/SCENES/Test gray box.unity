@@ -1255,6 +1255,7 @@ MonoBehaviour:
   drone2: {fileID: 1797486073}
   cashier: {fileID: 1832657801}
   cashierspawner: {fileID: 2108610504}
+  shopper1: {fileID: 1835706387}
   shopper2: {fileID: 1295386355}
   shopper3: {fileID: 1357236735}
   shopper4: {fileID: 700137586}
@@ -3882,6 +3883,8 @@ MonoBehaviour:
   agressive: 0
   activated: 0
   activationCoords: {x: 7.063, y: 0.819, z: 16.786}
+  normalguy: {fileID: 21300000, guid: fb55c633d2c2d684cbeaa49c3b0c1d2d, type: 3}
+  unityanimatorsucksdick: {fileID: 700137585}
 --- !u!212 &700137587
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7905,6 +7908,8 @@ MonoBehaviour:
   agressive: 0
   activated: 0
   activationCoords: {x: -6.041, y: 0.819, z: 1}
+  normalguy: {fileID: 21300000, guid: fb55c633d2c2d684cbeaa49c3b0c1d2d, type: 3}
+  unityanimatorsucksdick: {fileID: 1295386354}
 --- !u!212 &1295386356
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8982,6 +8987,8 @@ MonoBehaviour:
   agressive: 0
   activated: 0
   activationCoords: {x: -2.39, y: 0.819, z: 11.14}
+  normalguy: {fileID: 21300000, guid: fb55c633d2c2d684cbeaa49c3b0c1d2d, type: 3}
+  unityanimatorsucksdick: {fileID: 1357236734}
 --- !u!212 &1357236736
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13129,6 +13136,8 @@ MonoBehaviour:
   agressive: 0
   activated: 1
   activationCoords: {x: 0, y: 0, z: 0}
+  normalguy: {fileID: 21300000, guid: fb55c633d2c2d684cbeaa49c3b0c1d2d, type: 3}
+  unityanimatorsucksdick: {fileID: 1835706388}
 --- !u!95 &1835706388
 Animator:
   serializedVersion: 5

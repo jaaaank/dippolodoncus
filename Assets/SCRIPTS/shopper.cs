@@ -15,6 +15,7 @@ public class shopper : MonoBehaviour
     public bool agressive = false;
     public bool activated = false;
     public Vector3 activationCoords;
+    public Animator unityanimatorsucksdick;
 
     void Update()
     {
@@ -68,6 +69,16 @@ public class shopper : MonoBehaviour
         transform.localPosition = activationCoords;
     }
 
+    public void dontyouwannagoapeshit()
+    {
+        transform.Translate(0, -.07f, 0);
+    }
+
+    public void dontyouwannajustfuckingloseit()
+    {
+        transform.Translate(0, .07f, 0);
+
+    }
     public void standup()
     {
         activated = true;

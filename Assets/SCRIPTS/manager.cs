@@ -19,6 +19,7 @@ public class manager : MonoBehaviour
     public headDrone drone2;
     public cashierscript cashier;
     public itemspawner cashierspawner;
+    public shopper shopper1;
     public shopper shopper2;
     public shopper shopper3;
     public shopper shopper4;
@@ -32,6 +33,14 @@ public class manager : MonoBehaviour
     void Start()
     {
         startTimer();
+        shopper1.unityanimatorsucksdick.SetBool("daytime", day);
+        shopper1.dontyouwannagoapeshit();
+        shopper2.unityanimatorsucksdick.SetBool("daytime", day);
+        shopper1.dontyouwannagoapeshit();
+        shopper3.unityanimatorsucksdick.SetBool("daytime", day);
+        shopper1.dontyouwannagoapeshit();
+        shopper4.unityanimatorsucksdick.SetBool("daytime", day);
+        shopper1.dontyouwannagoapeshit();
     }
 
     void Update()
@@ -68,15 +77,28 @@ public class manager : MonoBehaviour
     public void timerDone()
     {
         day = !day;
+        shopper1.unityanimatorsucksdick.SetBool("daytime", day);
+        shopper2.unityanimatorsucksdick.SetBool("daytime", day);
+        shopper3.unityanimatorsucksdick.SetBool("daytime", day);
+        shopper4.unityanimatorsucksdick.SetBool("daytime", day);
         if (day)
         {
-            duration = 15;
+
+        duration = 15;
+        shopper1.dontyouwannagoapeshit();
+        shopper2.dontyouwannagoapeshit();
+        shopper3.dontyouwannagoapeshit();
+        shopper4.dontyouwannagoapeshit();
         dalights[0].intensity = 1; dalights[1].intensity = 1; dalights[2].intensity = 1; dalights[3].intensity = 1;
         drone1.deactivate();
         drone2.deactivate();
         }
         else
         {
+            shopper1.dontyouwannajustfuckingloseit();
+            shopper2.dontyouwannajustfuckingloseit();
+            shopper3.dontyouwannajustfuckingloseit();
+            shopper4.dontyouwannajustfuckingloseit();
             duration = 60;
         cashier.askForItem();
             uitext.text = "THE CASHIER CRAVES A BANANER";
