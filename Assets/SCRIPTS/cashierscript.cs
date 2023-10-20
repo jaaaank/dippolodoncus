@@ -13,7 +13,6 @@ public class cashierscript : MonoBehaviour
     public player playr;
     public itemcollector itmclectr;
     public SpriteRenderer sprite;
-    public Sprite evilsprite;
     public bool agressive = false;
     private int speed = 7;
     private int timeRemaining;
@@ -29,7 +28,6 @@ public class cashierscript : MonoBehaviour
     {
         if (agressive)
         {
-            sprite.sprite = evilsprite;
             itmclectr.enabled = false;
             transform.LookAt(playr.gameObject.transform.position);
             transform.Translate(Vector3.forward * Time.deltaTime * speed);
