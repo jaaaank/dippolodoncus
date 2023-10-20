@@ -102,7 +102,7 @@ public class player : MonoBehaviour
     {
         if (other.tag == "hidingspot")
         {
-            if(Input.GetKey(KeyCode.E))
+            if(Input.GetKey(KeyCode.E) & !bossman.day)
             {
                 //idk if im gonna keep this we'll see how the others like it
                 sprite.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);

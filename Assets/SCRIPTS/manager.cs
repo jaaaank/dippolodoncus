@@ -17,6 +17,8 @@ public class manager : MonoBehaviour
 
     public headDrone drone1;
     public headDrone drone2;
+    public SpriteRenderer woman1;
+    public SpriteRenderer woman2;
     public cashierscript cashier;
     public itemspawner cashierspawner;
     public shopper shopper1;
@@ -25,6 +27,7 @@ public class manager : MonoBehaviour
     public shopper shopper4;
     public TextMeshProUGUI uitext;
     public TextMeshProUGUI daytext;
+    public AudioSource ramsay;
 
     public bool hasShoes{set{setShoes();}}
     public int bananas = 0;
@@ -33,6 +36,7 @@ public class manager : MonoBehaviour
 
     void Start()
     {
+        woman2.enabled = false;
         startTimer();
         shopper1.unityanimatorsucksdick.SetBool("daytime", day);
         shopper1.dontyouwannagoapeshit();
@@ -84,6 +88,12 @@ public class manager : MonoBehaviour
         shopper4.unityanimatorsucksdick.SetBool("daytime", day);
         if (day)
         {
+            woman1.enabled = true;
+            if (nightNum >= 2)
+            {
+                woman2.enabled = true;
+            }
+            daytext.text = "Day: " + (nightNum+1).ToString();
             cashier.dayInterrupted();
             playr.hasItem = false;
             GameObject[] bananerFabs = GameObject.FindGameObjectsWithTag("itempickup");
@@ -102,6 +112,10 @@ public class manager : MonoBehaviour
         }
         else
         {
+            ramsay.Play();
+            woman1.enabled = false;
+            woman2.enabled = false;
+            daytext.text = "Night: " + (nightNum + 1).ToString();
             shopper1.dontyouwannajustfuckingloseit();
             shopper2.dontyouwannajustfuckingloseit();
             shopper3.dontyouwannajustfuckingloseit();
@@ -113,6 +127,7 @@ public class manager : MonoBehaviour
         nightNum++;
             if (nightNum > 0) 
             {
+
                 drone1.activate(); 
             }
             if (nightNum > 1)

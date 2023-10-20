@@ -95,7 +95,7 @@ public class cashierscript : MonoBehaviour
     }
     public void outOfTime()
     {
-        uitext.text = "THE CASHIER IS GOING TO FUCKING EAT YOU";
+        uitext.text = "THE CASHIER IS COMING TO GET YOU";
         agressive = true;
     }
 

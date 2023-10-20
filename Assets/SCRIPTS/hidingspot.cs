@@ -7,6 +7,7 @@ using UnityEngine;
 public class hidingspot : MonoBehaviour
 {
     public bool destroyed = false;
+    public manager bossman;
     public BoxCollider box;
     public TextMeshPro words;
     public player playr;
@@ -37,14 +38,14 @@ public class hidingspot : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            words.text = "Press E to hide!";
+            words.text = "Press E to hide at night!";
         }
     }
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.E) & !bossman.day)
             {
                 words.text = "You're hiding!";
                 hidingHere= true;
