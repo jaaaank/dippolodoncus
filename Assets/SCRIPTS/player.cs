@@ -21,7 +21,7 @@ public class player : MonoBehaviour
     public Animator unityanimatorsucksdick;
     public GameObject nanner;
     public bool hasItem=false;
-
+    public AudioSource pickup;
     private void Start()
     {
         skateboard.enabled = false;
@@ -93,6 +93,7 @@ public class player : MonoBehaviour
         }
         if (other.isTrigger & other.tag == "itempickup")
         {
+            pickup.Play();
             hasItem = true;
             Destroy(other.gameObject);
         }
