@@ -28,6 +28,7 @@ public class manager : MonoBehaviour
     public TextMeshProUGUI uitext;
     public TextMeshProUGUI daytext;
     public AudioSource ramsay;
+    public AudioSource fuckingryan;
 
     public bool hasShoes{set{setShoes();}}
     public int bananas = 0;
@@ -88,6 +89,7 @@ public class manager : MonoBehaviour
         shopper4.unityanimatorsucksdick.SetBool("daytime", day);
         if (day)
         {
+            fuckingryan.Play();
             woman1.enabled = true;
             if (nightNum >= 2)
             {
@@ -112,6 +114,7 @@ public class manager : MonoBehaviour
         }
         else
         {
+            fuckingryan.Stop();
             ramsay.Play();
             woman1.enabled = false;
             woman2.enabled = false;
