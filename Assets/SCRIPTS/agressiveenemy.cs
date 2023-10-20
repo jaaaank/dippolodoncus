@@ -12,7 +12,6 @@ public class agressiveenemy : MonoBehaviour
     public bool caught = false;
     public Vector3 startingPos;
     private Vector3 lostOffset = new Vector3(0,0,-.8f);
-    public AudioSource giveupnoise;
 
     private void Start()
     {
@@ -58,7 +57,6 @@ public class agressiveenemy : MonoBehaviour
     }
     private void giveUp()
     {
-        giveupnoise.Play();
         target = startingPos;
         caught = false;
     }

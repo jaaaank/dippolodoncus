@@ -22,6 +22,8 @@ public class player : MonoBehaviour
     public GameObject nanner;
     public bool hasItem=false;
     public AudioSource pickup;
+    public AudioSource walking;
+    public bool schmoving { set { setSchmoves(); } }
     private void Start()
     {
         skateboard.enabled = false;
@@ -125,4 +127,8 @@ public class player : MonoBehaviour
         }
     }
 
+    public void setSchmoves()
+    {
+
+    }
 }

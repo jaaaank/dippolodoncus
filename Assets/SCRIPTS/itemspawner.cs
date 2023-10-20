@@ -6,17 +6,8 @@ using UnityEngine;
 public class itemspawner : MonoBehaviour
 {
     public GameObject itempickup;
+    public AudioSource grumble;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void randomSpawner()
     {
@@ -58,6 +49,7 @@ public class itemspawner : MonoBehaviour
 
     public void spawnit(Vector3 snoob)
     {
+        grumble.Play();
         Instantiate(itempickup, snoob, itempickup.transform.rotation);
     }
 
