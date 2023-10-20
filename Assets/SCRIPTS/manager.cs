@@ -149,7 +149,7 @@ public class manager : MonoBehaviour
             }
             if (nightNum > 3)
             {
-                SceneManager.LoadScene("credits");
+                SceneManager.LoadScene("winscreen");
             }
         }
         countingDown = false;
