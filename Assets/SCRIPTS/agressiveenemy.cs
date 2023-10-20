@@ -32,11 +32,11 @@ public class agressiveenemy : MonoBehaviour
         }
         if (target.x - transform.position.x >= 0)
         {
-            sprite.flipX = true;
+            sprite.flipX = false;
         }
         if (target.x - transform.position.x < 0)
         {
-            sprite.flipX = false;
+            sprite.flipX = true;
         }
         //float AngleRad = Mathf.Atan2(target.z - transform.position.z, target.x - transform.position.x);
         //float angle = (180 / Mathf.PI) * AngleRad;

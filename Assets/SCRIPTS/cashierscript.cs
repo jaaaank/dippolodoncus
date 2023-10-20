@@ -21,6 +21,7 @@ public class cashierscript : MonoBehaviour
     private int duration = 30;
     public TextMeshProUGUI uitext;
     private bool FUCKKKKKK = false;
+    public Animator gonnakms;
 
 
     // Update is called once per frame
@@ -48,6 +49,7 @@ public class cashierscript : MonoBehaviour
 
     public void askForItem()
     {
+        gonnakms.SetBool("hungry", true);
         uitext.text = "THE CASHIER CRAVES A BANANER";
         //play some audio or something
         //put some text on screen or something
@@ -85,6 +87,7 @@ public class cashierscript : MonoBehaviour
         CancelInvoke();
         countingDown = false;
         cooldownTimer();
+        gonnakms.SetBool("hungry", false);
     }
 
     public void dayInterrupted()

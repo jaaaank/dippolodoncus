@@ -83,6 +83,7 @@ public class manager : MonoBehaviour
     public void timerDone()
     {
         day = !day;
+        cashier.gonnakms.SetBool("day", day);
         shopper1.unityanimatorsucksdick.SetBool("daytime", day);
         shopper2.unityanimatorsucksdick.SetBool("daytime", day);
         shopper3.unityanimatorsucksdick.SetBool("daytime", day);
