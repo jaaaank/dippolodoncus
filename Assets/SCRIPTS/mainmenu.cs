@@ -12,7 +12,7 @@ public class mainmenu : MonoBehaviour
     }
     public void credits()
     {
-        SceneManager.LoadScene("credits");
+        Application.OpenURL("https://dippostudios.itch.io/");
     }
     public void quitGame()
     {
